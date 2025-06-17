@@ -3,11 +3,17 @@ package com.primeiroprojeto.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "tb_user")
 //para tornar os dados cadeias de caracteres para trafegar na rede, poder ser gravado em arquivo e etc
 public class User implements Serializable {
 
 //    Atributos
     private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
