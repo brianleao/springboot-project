@@ -1,16 +1,16 @@
 package com.primeiroprojeto.course.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_user")
-//para tornar os dados cadeias de caracteres para trafegar na rede, poder ser gravado em arquivo e etc
 public class User implements Serializable {
 
-//    Atributos
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +20,10 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
-    public User() {
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
 
+    public User() {
     }
 
     public User(Long id, String nome, String email, String phone, String password) {
@@ -71,6 +73,10 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 
     @Override
