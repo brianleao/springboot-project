@@ -1,4 +1,4 @@
-package com.primeiroprojeto.course.resourses.exceptions;
+package com.primeiroprojeto.course.resources.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

@@ -1,4 +1,4 @@
-package com.primeiroprojeto.course.resourses;
+package com.primeiroprojeto.course.resources;
 
 import com.primeiroprojeto.course.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

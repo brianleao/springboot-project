@@ -1,4 +1,4 @@
-package com.primeiroprojeto.course.resourses;
+package com.primeiroprojeto.course.resources;
 
 import com.primeiroprojeto.course.entities.Category;
 import com.primeiroprojeto.course.services.CategoryService;
